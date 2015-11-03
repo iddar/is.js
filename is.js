@@ -3,15 +3,7 @@
 
 // AMD with global, Node, or global
 ;(function(root, factory) {
-    if(typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['is'], function(is) {
-            // Also create a global in case some scripts
-            // that are loaded still are looking for
-            // a global even when an AMD loader is in use.
-            return (root.is = factory(is));
-        });
-    } else if(typeof exports === 'object') {
+    if(typeof exports === 'object') {
         // Node. Does not work with strict CommonJS, but
         // only CommonJS-like enviroments that support module.exports,
         // like Node.
